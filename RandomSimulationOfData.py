@@ -159,16 +159,11 @@ if __name__ == '__main__':
             message_json = json.dumps(
                 {
                     "time": int(time.time()),
-                   # "quality": "GOOD",
-                    #"hostname": "Laptop",
-                    #"Value": psutil.cpu_percent(),
-                    #"time": int(time.time()),
                     "windspeed": random.randint(0, 100),
                     "poweroutput": random.randint(0, 1000),
                     "site": "OREC",
                     "turbine": "001",
-                    #"Value": row.to_dict(),
-
+                   
                 }, indent=2)
             mqtt_connection.publish(
                 topic=message_topic,
